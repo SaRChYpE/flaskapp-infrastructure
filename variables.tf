@@ -9,12 +9,17 @@ variable "instance_type" {
   default     = "t2.micro"
 }
 
-variable "vpc_id" {
-  description = "VPC ID for the security group"
-  type        = string
-}
-
 variable "aws_region" {
   description = "AWS region"
   type        = string
+}
+
+variable "vpc_cidr" {
+  description = "CIDR for VPC"
+  type = string
+}
+
+variable "public_subnet_cidr" {
+  description = "Cidr for public subnet"
+  type = string
 }
